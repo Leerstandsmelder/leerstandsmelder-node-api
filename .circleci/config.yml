@@ -1,0 +1,44 @@
+version: 2
+jobs:
+  release_master:
+    working_directory: /app
+    docker:
+      - image: docker:stable-git
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Release Latest Image
+          command: |
+            set +o pipefail
+            docker login -u ${DOCKER_USER} -p ${DOCKER_PASS}
+            docker build -t leerstandsmelder/node-api:latest .
+            docker push leerstandsmelder/node-api:latest
+
+  release_branch:
+    working_directory: /app
+    docker:
+      - image: docker:stable-git
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Release Branch Image
+          command: |
+            set +o pipefail
+            docker login -u ${DOCKER_USER} -p ${DOCKER_PASS}
+            docker build -t leerstandsmelder/node-api:${CIRCLE_BRANCH} .
+            docker push leerstandsmelder/node-api:${CIRCLE_BRANCH}
+
+workflows:
+  version: 2
+  build_pipeline:
+    jobs:
+      - release_master:
+          filters:
+            branches:
+              only: master
+      - release_branch:
+          filters:
+            branches:
+              only: /^rel_.+$/
