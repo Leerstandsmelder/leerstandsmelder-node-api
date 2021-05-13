@@ -1,0 +1,6 @@
+node_modules
+Dockerfile
+*.md
+config.json
+.circleci
+test
