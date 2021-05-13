@@ -37,7 +37,7 @@
     "secure-random": "^1.1.1",
     "serve-static": "^1.11.1",
     "sha1": "^1.1.1",
-    "sharp": "^0.18.4",
+    "sharp": "^0.19.1",
     "speakingurl": "^14.0.1",
     "striptags": "^3.1.0",
     "swagger-node-restify": "git://github.com/dasantonym/swagger-node-restify.git",
