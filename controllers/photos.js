@@ -83,7 +83,6 @@ module.exports.post = function (req, res, next) {
             });
         })
         .then((photo) => {
-            workers.createThumbnails(photo);
             res.setHeader('Content-Type', 'application/json');
             res.send(200, photo);
             next();
