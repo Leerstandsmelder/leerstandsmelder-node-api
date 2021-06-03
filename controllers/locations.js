@@ -35,7 +35,7 @@ class LocationsController extends CommonController {
               }
             }
             query = require('../lib/util/query-mapping')({}, req, config);
-            if(!isAdmin) {
+            if(!isAdmin && (!config.query || !config.query.user_mapping)) {
                 query = conditionalAdd(query, "hidden", false,!isAdmin);
             }
 
@@ -95,7 +95,8 @@ class LocationsController extends CommonController {
                 // TODO: put this in lib
                 let isAdmin = req.api_key &&  req.api_key.scopes && (
                         req.api_key.scopes.indexOf("admin") > -1 ||
-                        req.api_key.scopes.indexOf("region-" + region.uuid) > -1
+                        req.api_key.scopes.indexOf("region-" + region.uuid) > -1 ||
+                        result.user_uuid == req.user.uuid
                     );
 
                 if (!isAdmin && (result.hidden || region.hide)) {
