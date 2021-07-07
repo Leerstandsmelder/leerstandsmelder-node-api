@@ -11,6 +11,7 @@ var mongoose = require('mongoose'),
         updated: Date,
         active: { type: Boolean, default: true }
     }, {
+        usePushEach: true,
         autoindex: process.env.NODE_ENV !== 'production',
         id: false
     }),
