@@ -114,5 +114,21 @@ module.exports = {
                 responseClass: 'List[Comments]'
             }
         }
+    },
+    '/regions/:uuid/comments/all': {
+        'get': {
+            controller: comments.map('findAll', {
+                resource: 'Comment',
+                select: 'uuid user_uuid subject_uuid body hidden created updated'
+            }),
+            scope: 'public',
+            spec: {
+                path: '/regions/{uuid}/comments',
+                description: 'Get list of Comments for a Region',
+                summary: 'Find Region Comments',
+                nickname: 'findRegionComments',
+                responseClass: 'List[Comments]'
+            }
+        }
     }
 };
