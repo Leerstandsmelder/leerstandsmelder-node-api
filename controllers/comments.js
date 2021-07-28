@@ -19,6 +19,7 @@ class CommentsController extends CommonController {
                 skip = Math.max(parseInt(req.query.skip || 0), 0),
                 uuid = req.params.region_uuid || req.params.uuid,
                 region = yield mongoose.model("Region").findOne({$or: [{uuid: uuid}, {slug: uuid}]}),
+                flat = req.query.flat || false,
                 isAdmin = req.api_key &&  req.api_key.scopes && (
                         req.api_key.scopes.indexOf("admin") > -1 ||
                         req.api_key.scopes.indexOf("region-" + region.uuid) > -1
@@ -51,10 +52,17 @@ class CommentsController extends CommonController {
                     .select(config.select).exec();
                 result.comments = result.comments ? result.comments : undefined;
                 result.commentCount = result.comments.length;
+                if(flat) {
+                    result = result.comments;
+                }
                 return result;
             }));
-
-            data.results = data.results.filter(function(item){ return item.commentCount > 0; });
+            if(flat) {
+                data.results = data.results.filter(function(item){ return item.length; });
+                data.results = [].concat.apply([], data.results)
+            } else {
+                data.results = data.results.filter(function(item){ return item.commentCount > 0; });
+            }
 
             rHandler.handleDataResponse(data, 200, res, next);
         });
