@@ -3,7 +3,7 @@
   "version": "1.2.1",
   "description": "Leerstandsmelder Node.JS API server",
   "main": "app.js",
-  "node": ">=6.0",
+  "node": ">=8.0",
   "scripts": {
     "test": "gulp lint && mocha $(find test -path '*.spec.*') --recursive --timeout=10000"
   },
@@ -27,7 +27,7 @@
     "mongoose": "^4.4.7",
     "mongoose-unique-validator": "^1.0.2",
     "mysql": "^2.9.0",
-    "nodemailer": "^6.4.16",
+    "nodemailer": "^6.7.2",
     "prompt": "^1.0.0",
     "request": "^2.83.0",
     "restify": "^6.2.3",
@@ -39,7 +39,7 @@
     "sha1": "^1.1.1",
     "sharp": "^0.19.1",
     "speakingurl": "^14.0.1",
-    "striptags": "^3.1.0",
+    "striptags": "^3.2.0",
     "swagger-node-restify": "git://github.com/dasantonym/swagger-node-restify.git",
     "swagger-ui": "^3.4.0",
     "uuid4": "^1.0.0",
@@ -51,7 +51,7 @@
     "chance": "^1.0.1",
     "gulp": "^3.9.1",
     "gulp-jshint": "^2.0.1",
-    "jshint": "^2.9.3",
+    "jshint": "^2.13.1",
     "jshint-stylish": "^2.2.1",
     "mocha": "^4.0.1",
     "sinon": "^4.0.1"
