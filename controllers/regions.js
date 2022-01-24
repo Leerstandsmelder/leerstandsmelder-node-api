@@ -44,7 +44,7 @@ class RegionsController extends CommonController {
             } else {
                 var results = yield mongoose.model("Location").mapReduce({
                     map: function () {
-                        if (!this.hide) {
+                        if (!this.hidden) {
                             emit(this.region_uuid, 1); // jshint ignore:line
                         }
                     },
