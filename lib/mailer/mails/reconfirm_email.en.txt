@@ -1,0 +1,15 @@
+Hallo,
+
+leider ist uns erst jetzt aufgefallen das unsere Emails von einigen Providern geblockt werden (zb Gmail, AOL, web.de).
+Dadurch hat dich unsere Mail zur Bestätigung deines Accounts bei leerstandsmelder.de nie erreicht. 
+Mit dieser Mail wollen wir dieses Versäumnis korregieren.
+
+Bestätige Deine E-Mail, indem Du auf folgenden Link klickst:
+
+!CONFIRM_URL!
+
+Danke!
+
+--
+
+http://www.leerstandsmelder.de

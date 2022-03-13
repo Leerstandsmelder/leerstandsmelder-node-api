@@ -141,6 +141,11 @@ User.methods.sendConfirmationMail = function () {
     return mailer.sendConfirmationRequest(this);
 };
 
+User.methods.resendConfirmationMail = function () {
+    var mailer = require('../lib/mailer/mailer');
+    return mailer.resendConfirmationRequest(this);
+};
+
 User.methods.requestPasswordReset = function () {
     var mailer = require('../lib/mailer/mailer'),
         _self = this;
