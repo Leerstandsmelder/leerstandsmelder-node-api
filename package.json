@@ -16,7 +16,7 @@
   "dependencies": {
     "airbrake": "^2.1.1",
     "assert-plus": "^1.0.0",
-    "async": "^2.1.2",
+    "async": "^3.2.2",
     "bluebird": "^3.0.5",
     "captchapng": "0.0.1",
     "checksum": "^0.1.1",
