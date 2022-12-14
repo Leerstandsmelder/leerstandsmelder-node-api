@@ -47,13 +47,13 @@
   "devDependencies": {
     "chai": "^4.1.2",
     "chance": "^1.0.1",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-jshint": "^2.0.1",
     "jshint": "^2.13.1",
     "jshint-stylish": "^2.2.1",
     "mocha": "^4.0.1",
     "sinon": "^4.0.1",
     "swagger-node-restify": "git://github.com/dasantonym/swagger-node-restify.git",
-    "swagger-ui": "^3.4.0"
+    "swagger-ui": "^3.52.5"
   }
 }
