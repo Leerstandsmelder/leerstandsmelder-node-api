@@ -43,7 +43,7 @@
     "swagger-node-restify": "https://github.com/dasantonym/swagger-node-restify.git",
     "swagger-ui": "^3.4.0",
     "uuid4": "^1.0.0",
-    "validator": "^9.0.0",
+    "validator": "^13.7.0",
     "yargs": "^9.0.1"
   },
   "devDependencies": {
