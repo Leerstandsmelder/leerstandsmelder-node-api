@@ -40,8 +40,6 @@
     "sharp": "^0.19.1",
     "speakingurl": "^14.0.1",
     "striptags": "^3.2.0",
-    "swagger-node-restify": "git://github.com/dasantonym/swagger-node-restify.git",
-    "swagger-ui": "^3.4.0",
     "uuid4": "^1.0.0",
     "validator": "^9.0.0",
     "yargs": "^9.0.1"
@@ -54,6 +52,8 @@
     "jshint": "^2.13.1",
     "jshint-stylish": "^2.2.1",
     "mocha": "^4.0.1",
-    "sinon": "^4.0.1"
+    "sinon": "^4.0.1",
+    "swagger-node-restify": "git://github.com/dasantonym/swagger-node-restify.git",
+    "swagger-ui": "^3.4.0"
   }
 }
